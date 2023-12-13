@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package spdvi.addlabelsruntime;
 
 import java.awt.Color;
@@ -30,7 +26,6 @@ public class Main extends javax.swing.JFrame {
 
         pnlLabels = new javax.swing.JPanel();
         btnAddLabel = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,25 +40,13 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("jLabel1");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel1MouseEntered(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAddLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel1)))
+                .addContainerGap()
+                .addComponent(btnAddLabel)
                 .addGap(18, 18, 18)
                 .addComponent(pnlLabels, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(14, Short.MAX_VALUE))
@@ -73,10 +56,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAddLabel)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel1))
+                    .addComponent(btnAddLabel)
                     .addComponent(pnlLabels, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
@@ -85,33 +65,11 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddLabelActionPerformed
-       JLabel label = new JLabel();
-        //ColorLabel label = new ColorLabel();
-       label.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                label.setForeground(Color.red);
-            }
-        });
-       
-       label.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                label.setForeground(Color.black);
-            }
-        });
-       
+        JLabel label = new JLabel();
         label.setText("Label " + cont++);
-//        label.setSize(150, 20);
         pnlLabels.add(label);
-
         pack();
-//        pnlLabels.invalidate();
     }//GEN-LAST:event_btnAddLabelActionPerformed
-
-    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
-        jLabel1.setForeground(Color.red);
-    }//GEN-LAST:event_jLabel1MouseEntered
 
     /**
      * @param args the command line arguments
@@ -150,7 +108,6 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddLabel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel pnlLabels;
     // End of variables declaration//GEN-END:variables
 }
